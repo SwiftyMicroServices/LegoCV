@@ -7,11 +7,11 @@ Pod::Spec.new do |s|
 LegoCV is native OpenCV framework built for Swift and Objective-C projects. It eliminates the need to use Objective-C++ and allows for full compatibility with native Swift projects. The only dependency is native OpenCV framework for iOS.
                        DESC
 
-  s.homepage         = 'https://github.com/legoless/legocv'
+  s.homepage         = 'https://github.com/swiftymicroservices/legocv4'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => '3-clause BSD', :file => 'LICENSE' }
-  s.author           = { 'Dal Rupnik' => 'legoless@gmail.com' }
-  s.source           = { :git => 'https://github.com/legoless/legocv.git', :tag => s.version.to_s }
+  s.author           = { 'swiftymicroservices' => 'swiftymicroservices@gmail.com' }
+  s.source           = { :git => 'https://github.com/swiftymicroservices/legocv4.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/thelegoless'
 
   s.ios.deployment_target = '11.0'

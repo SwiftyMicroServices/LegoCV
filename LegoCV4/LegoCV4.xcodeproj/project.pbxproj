@@ -258,7 +258,7 @@
 		3898711D1E6F3CB900020CFB /* OCVFileStorageFormatDescriptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3898711B1E6F3CB900020CFB /* OCVFileStorageFormatDescriptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3898711E1E6F3CB900020CFB /* OCVFileStorageFormatDescriptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3898711C1E6F3CB900020CFB /* OCVFileStorageFormatDescriptor.m */; };
 		38B4D4BA1E2AA01F008AAAB0 /* LegoCV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B4D4B01E2AA01F008AAAB0 /* LegoCV4.framework */; };
-		38B4D4BF1E2AA01F008AAAB0 /* LegoCV4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B4D4BE1E2AA01F008AAAB0 /* LegoCV4Tests.swift */; };
+		38B4D4BF1E2AA01F008AAAB0 /* LegoCVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B4D4BE1E2AA01F008AAAB0 /* LegoCVTests.swift */; };
 		38B4D4C11E2AA01F008AAAB0 /* LegoCV4.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B4D4B31E2AA01F008AAAB0 /* LegoCV4.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		38B4D4D31E2AA110008AAAB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B4D4D21E2AA110008AAAB0 /* AppDelegate.swift */; };
 		38B4D4D81E2AA110008AAAB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B4D4D61E2AA110008AAAB0 /* Main.storyboard */; };
@@ -667,7 +667,7 @@
 		38B4D4B31E2AA01F008AAAB0 /* LegoCV4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LegoCV4.h; sourceTree = "<group>"; };
 		38B4D4B41E2AA01F008AAAB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38B4D4B91E2AA01F008AAAB0 /* LegoCV4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LegoCV4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		38B4D4BE1E2AA01F008AAAB0 /* LegoCV4Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoCV4Tests.swift; sourceTree = "<group>"; };
+		38B4D4BE1E2AA01F008AAAB0 /* LegoCVTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegoCVTests.swift; sourceTree = "<group>"; };
 		38B4D4C01E2AA01F008AAAB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38B4D4D01E2AA110008AAAB0 /* FaceDetection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceDetection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38B4D4D21E2AA110008AAAB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -990,7 +990,7 @@
 		38B4D4BD1E2AA01F008AAAB0 /* LegoCV4Tests */ = {
 			isa = PBXGroup;
 			children = (
-				38B4D4BE1E2AA01F008AAAB0 /* LegoCV4Tests.swift */,
+				38B4D4BE1E2AA01F008AAAB0 /* LegoCVTests.swift */,
 				38B4D4C01E2AA01F008AAAB0 /* Info.plist */,
 			);
 			path = LegoCV4Tests;
@@ -1944,7 +1944,6 @@
 					};
 					38B4D4AF1E2AA01F008AAAB0 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 289M6XEDV4;
 						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
@@ -2201,7 +2200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38B4D4BF1E2AA01F008AAAB0 /* LegoCV4Tests.swift in Sources */,
+				38B4D4BF1E2AA01F008AAAB0 /* LegoCVTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2494,7 +2493,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 289M6XEDV4;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -2516,7 +2515,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 289M6XEDV4;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

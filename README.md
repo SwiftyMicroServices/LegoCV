@@ -1,6 +1,6 @@
-# LegoCV
+# LegoCV4
 
-LegoCV is native OpenCV framework built for Swift and Objective-C projects. It eliminates the need to use Objective-C++ and write bringing code, and allows for full compatibility with native Swift projects. The only dependency is the native [OpenCV framework](http://opencv.org) for **iOS** (*and later macOS and tvOS*).
+LegoCV4 is native OpenCV framework built for Swift and Objective-C projects. It eliminates the need to use Objective-C++ and write bringing code, and allows for full compatibility with native Swift projects. The only dependency is the native [OpenCV framework](http://opencv.org) for **iOS** (*and later macOS and tvOS*).
 
 ## Mission
 
@@ -12,10 +12,10 @@ This project's purpose is to create a simple, easy to use native Swift framework
 
 ## Example
 
-The following examples display the difference with using LegoCV in Swift or Objective-C compared to vanilla OpenCV in C++.
-The example is extracted from Face detection sample code, included with LegoCV. On iOS it uses `OCVVideoCamera` wrapper class to get image stream from camera (wraps OpenCV's `CvVideoCamera`, to keep backward compatibility).
+The following examples display the difference with using LegoCV4 in Swift or Objective-C compared to vanilla OpenCV in C++.
+The example is extracted from Face detection sample code, included with LegoCV4. On iOS it uses `OCVVideoCamera` wrapper class to get image stream from camera (wraps OpenCV's `CvVideoCamera`, to keep backward compatibility).
 
-#### Swift (LegoCV):
+#### Swift (LegoCV4):
 ```swift
 let faceDetector = OCVCascadeClassifier();
 faceDetector.load(path: "haarcascade_frontalface_alt2.xml")
@@ -36,7 +36,7 @@ func process(image: OCVMat) {
     OCVOperation.convertColor(from: image, to: gray, with: .BGR2GRAY)
     
     //
-    // LegoCV syntactic sugar allows you to perform operations directly on the input, only defining output.
+    // LegoCV4 syntactic sugar allows you to perform operations directly on the input, only defining output.
     //
     image.convertColor(to: gray, with: .BGR2GRAY)
     let grayImg = image.convertColor(with: .BGR2GRAY)
@@ -51,7 +51,7 @@ func process(image: OCVMat) {
     var faces : [OCVRect] = faceDetector.detectMultiscale(with: smallImage, scaleFactor: 1.1, minNeighbours: 2, flags: 0, minSize: minSize).map { $0.rect }
     
     //
-    // More LegoCV objective syntactic sugar
+    // More LegoCV4 objective syntactic sugar
     //
     let result : OCVCascadeClassifierResult = faceDetector.detectMultiscale(on: smallImage, with: OCVCascadeClassifierOptions.default)
     faces = result.objects
@@ -59,7 +59,7 @@ func process(image: OCVMat) {
 }
 ```
 
-#### Objective-C (LegoCV with Objective-C):
+#### Objective-C (LegoCV4 with Objective-C):
 ```objectivec
 - (void)setupClassifier {
     self.faceDetector = [[OCVCascadeClassifier alloc] init];
@@ -126,34 +126,34 @@ As this is a project in progress, documentation will be added to [Wiki]() as dev
 
 ## Performance
 
-There is a smaller performance impact compared to pure native C++ code of OpenCV, due to Objective-C messaging system. If you need a high performance code, it is still recommended to write the algorithm in C++ and add bridges to LegoCV or Objective-C.
+There is a smaller performance impact compared to pure native C++ code of OpenCV, due to Objective-C messaging system. If you need a high performance code, it is still recommended to write the algorithm in C++ and add bridges to LegoCV4 or Objective-C.
 
 ## Installation
 
 ### Prerequisites
 
-For LegoCV you need `cmake`. Install it with `brew install cmake` and make sure you have Xcode Command Line tools installed. Trigger with `xcode-select --install` to check. Also make sure you use latest Xcode version and not Beta for master branch.
+For LegoCV4 you need `cmake`. Install it with `brew install cmake` and make sure you have Xcode Command Line tools installed. Trigger with `xcode-select --install` to check. Also make sure you use latest Xcode version and not Beta for master branch.
 
 ### CocoaPods
 
-LegoCV can be installed with [CocoaPods](https://cocoapods.org) or [Carthage](https://github.com/Carthage/Carthage). It's only dependency is OpenCV framework, which can be downloaded from their website.
+LegoCV4 can be installed with [CocoaPods](https://cocoapods.org) or [Carthage](https://github.com/Carthage/Carthage). It's only dependency is OpenCV framework, which can be downloaded from their website.
 
 ```ruby
-pod 'LegoCV'
+pod 'LegoCV4'
 
 # Use only specific modules
-pod 'LegoCV/Core'
-pod 'LegoCV/VideoIO'
+pod 'LegoCV4/Core'
+pod 'LegoCV4/VideoIO'
 ```
 
-*LegoCV supports iOS 8 and higher.*
+*LegoCV4 supports iOS 8 and higher.*
 
 ### Example Project
 
 1. First clone the project:
 
-`git clone git@github.com:legoless/legocv.git`
-`cd legocv`
+`git clone git@github.com:legoless/LegoCV4.git`
+`cd LegoCV4`
 
 2. Initialize submodules
 
@@ -168,9 +168,9 @@ git submodule update
 /usr/bin/python opencv/platforms/ios/build_framework.py ios --dynamic
 ```
 
-4. Open `LegoCV.xcodeproj` and build.
+4. Open `LegoCV4.xcodeproj` and build.
 
 
 # License
 
-[BSD license](https://github.com/legoless/legocv/blob/master/LICENSE), respect [OpenCV](https://github.com/opencv/opencv/blob/master/LICENSE) license as well.
+[BSD license](https://github.com/legoless/LegoCV4/blob/master/LICENSE), respect [OpenCV](https://github.com/opencv/opencv/blob/master/LICENSE) license as well.
